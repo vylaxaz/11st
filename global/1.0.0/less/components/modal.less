@@ -1,0 +1,200 @@
+.cmModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+    &.cm-scrollable {
+        overflow: scroll;
+
+        .cmModal-dialog {
+            top: 2%;
+            transform: translate(-50%, 0%);
+            -ms-transform: translate(-50%, 0%);
+            -webkit-transform: translate(-50%, 0%);
+            -moz-transform: translate(-50%, 0%);
+            -o-transform: translate(-50%, 0%);
+        }
+    }
+}
+.cmModal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+.cmModal-dialog {
+    max-width: 500px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.cmModal-body {
+    padding: 15px 0;
+    .roboto(500, 12px);
+    color: #414141;
+    line-height: 150%;
+
+    coupon {
+        text-align: center;
+        display: block;
+        margin-bottom: 15px;
+
+        img {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+
+    .cm-message {
+        text-align: center;
+    }
+
+    ul {
+        margin-left: 15px;
+
+        li {
+            list-style: disc;;
+            .roboto(500, 12px);
+            color: #414141;
+            line-height: 150%;
+
+            a {
+                color: #f22a2c;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.cmModal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.cmModal-header .close {
+    margin-top: -2px;
+}
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+
+    &:hover {
+        color: #f22a2c;
+        opacity: 1;
+    }
+}
+.cmModal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.cmModal-header {
+    margin: 0;
+    padding: 0;
+    border-bottom-width: 2px;
+    padding-bottom: 15px;
+}
+.cmModal-content {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-color: #DDDDDD;
+    padding: 30px;
+    border-radius: 2px;
+}
+.cmModal-title {
+    .roboto(500, 20px);
+    margin: 0;
+    line-height: normal;
+    color: #000;
+}
+.cmModal-footer {
+    padding: 15px 15px 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+.btn {
+    .roboto(500, 14px);
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+
+    &.btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+    }
+
+    &.btn-primary {
+        background-color: #f22a2c;
+        border: 1px solid #f22a2c;
+        color: #fff;
+
+        &:hover {
+            background-color: #c41819;
+        }
+    }
+}
+.cmModal-footer .btn+.btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+.modal-content, .modal-button {
+    display: none;
+}

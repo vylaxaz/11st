@@ -1,0 +1,137 @@
+.slick {
+    opacity: 0;
+    max-height: 300px;
+    height: 300px;
+    overflow: hidden;
+
+    &.slick-initialized {
+        opacity:1;
+        transition: opacity 0.5s ease-out;
+        max-height: 1000px;
+        height: auto;
+
+        .slick-slide, .slick-slider {
+            display: block;
+        }
+    }
+
+    .slick-arrow {
+        background: url('//www.11street.my/img_glb/sprites.png') no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        margin-top: -20px;
+        cursor: pointer;
+        opacity: 0.5;
+
+        &.slick-disabled {
+            display: none !important;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.cm-prev {
+            background-position: 0px -96px !important;
+            left: 0;
+        }
+        &.cm-next {
+            background-position: -40px -96px !important;
+            right: 0;
+        }
+    }
+
+    .slick-list {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+    }
+
+    .slick-track {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: block;
+
+        &:before, &:after {
+            content: '';
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+    }
+
+    .slick-slide {
+        float: left;
+        height: auto;
+        min-height: 1px;
+        display: none;
+
+        img {
+            display: block;
+        }
+
+        &.dragging {
+            img {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.slick-slider {
+    position: relative;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+
+    .slick-track, .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slick-loading {
+    .slick-track {
+        visibility: hidden;
+    }
+
+    img {
+        display: none;
+    }
+
+    .slick-slide {
+        visibility: hidden;
+    }
+}
+
+.cm-lazyLoading {
+    opacity: 1;
+    background: #f7f7f7 url('//www.11street.my/img_glb/common/loader.gif') no-repeat center;
+}

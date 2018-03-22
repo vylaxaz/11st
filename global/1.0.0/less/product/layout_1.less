@@ -1,0 +1,96 @@
+.cm-prod-wrapper {
+    padding: 10px;
+}
+.cm-prod-item {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+
+    a {
+        width: 100%;
+    }
+
+    &:hover {
+        .cm-prod-name {
+            text-decoration: underline;
+        }
+    }
+}
+.cm-prod-name {
+    .roboto(500, 14px);
+    display: block;
+    display: -webkit-box;
+    max-width: 420px;
+    height: 36.4px;
+    line-height: 1.3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #000;
+}
+.cm-prod-discount {
+    .roboto(700, 18px);
+    color: #f22a2c;
+    margin-top: 5px;
+
+    span {
+        font-size: 13px;
+    }
+}
+.cm-prod-image {
+    border: 1px solid #f2f2f2;
+
+    img {
+        width: 100%;
+    }
+}
+.cm-retail-price {
+    .roboto(500, 13px);
+    text-decoration: line-through;
+}
+.cm-selling-price {
+    .roboto(700, 18px);
+    color: #000;
+}
+.cm-prod-badge {
+    background-color: #f2efef;
+    height: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0 10px;
+
+    div {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAPCAMAAABp5ZcHAAAAn1BMVEUAAAAIr7UIr7UaobsIr7VMbM0Ir7XyKixMbM0Ir7UIr7UIr7VMbM1MbM1MbM3yKizyKixMbM1MbM1MbM1MbM3yKizyKiwIr7UIr7XyKizyKiwIr7UIr7UIr7XyKizyKixMbM3yKixMbM0Ir7XyKizyKixMbM0Ir7VMbM3yKizyKiwIr7XyKiwIr7XyKiwIr7XyKizyKizyKixMbM0Ir7Ww8f51AAAAMnRSTlMAH+EFFO7p+dXEJg3257qrjVsoHQ8M6dzMtX10LioG8Z6EcltXQzs3LNPPp6R/d0QsIsGp2BIAAAEGSURBVCjPlZKJkoIwDEBTLjlWQeUQBNRV170P2v//ts3U0lCcwfENM4EOb5Imgbu08BBJR+y+6TxiYbCpmQOIzzU+aGbdgFwf25aQeDZ+8AFkdkNmWtwKxZdtmq7rp2QSfamW0FjOKOd+P2E6yvIuRyHYyEz5hMmUGEItRD2+55QZCPFx9FBkWPYGuAmZBzmZ+NMwf6CRojT9F3u14CqQiQ2t8jxpM6PagsFVFA3wZbpcr3gfKGcCksrskHdppIgdmj+5HB+uwpzuWZ6z7FwOp1IYUwFY4O8qaOLdYBHi203Y2oCsn1/7QLSn+LqBb9UfEIXKiOIE2al8P/yaZ5HDgiB0Inz9B1ANTRnAmmmSAAAAAElFTkSuQmCC');
+        display: inline-block;
+        margin-right: 7px;
+    }
+
+    .cm-badge-shipping {
+        width: 16px;
+        height: 15px;
+    }
+
+    .cm-badge-lowest {
+        width: 14px;
+        height: 15px;
+        background-position: -22px;
+    }
+
+    .cm-badge-official {
+        width: 14px;
+        height: 15px;
+        background-position: -43px;
+    }
+}
+
+// mobile
+.cm-mobile {
+    .cm-prod-item {
+        max-width: 100%;
+    }
+}

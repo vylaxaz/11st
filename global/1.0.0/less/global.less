@@ -1,0 +1,38 @@
+@import 'grid/grid';
+@import 'classes/classes';
+@import 'fonts/fonts';
+
+// components
+@import 'components/carousel';
+@import 'components/navbar';
+@import 'components/modal';
+
+// product template
+@import 'product/layout_1';
+
+main {
+    &#container {
+        &.cm-1180 {
+            width: 1180px;
+        }
+    }
+}
+
+#cm-promotion {
+    *, &:before, &:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.clearfix {
+    &:before, &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
